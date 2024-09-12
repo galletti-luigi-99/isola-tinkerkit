@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>isola tinkerkit</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>	
+        <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="style2.css">
+    </head>
+    <body>
+        <table class="titolo">
+            <td><h1>ISOLA TINKERKIT</h1></td>
+          </table>
+          <table border="0" class="tabella">
+        <tr>
+        <td><button onclick="start_programma()" data-command="start">START PROGRAMMA APPRESO</button></td>
+        <td><button onclick="reset_allarmi()" data-command="emergenza">RESET ALLARMI</button></td>
+        <td><button onclick="stop_programma()" data-command="stop">STOP PROGRAMMA</button></td>
+        <td><button onclick="emergenza()" data-command="emergenza">EMERGENZA</button></td>
+        <td><button onclick="apprendimento()" data-command="apprendi">AUTOAPPRENDIMENTO</button></td>
+        <td><button onclick="reset_posizione_robot()" data-command="reset_robot">RIPRISTINO ROBOT</button></td>
+        </tr>
+        </table><br>
+        <p></p>  
+        <table border="0" class="tabella2">
+            <td>
+            <table border="0" class="tabella3">
+                <tr>
+                <td>IN FUNZIONE</td>
+            <td><div id="ledf" class="led-grey"></div></td>
+            </tr>
+            <tr>
+                <td>IN ALLARME</td>
+                <td><div id="leda" class="led-grey"></div></td>
+            </tr>
+            <tr>
+                <td>APPRESO</td>
+                <td><div id="ledp" class="led-grey"></div></td>
+            </tr>
+            <tr>
+                <td>ROBOT OK</td>
+                <td><div id="ledo" class="led-grey"></div></td>
+            </tr>
+            </table>
+            <p><span id="finestra"></span></p>
+            <p><span id="finestra2"></span></p>
+            </td>
+            <td>
+                <img src="braccio.jpg" style="width: 350px; height: 570px">
+            </td>
+            <td>    
+        <div class="range_container">
+            <div class="sliders_control">
+                <div class="sliders">
+                <div class="form_control_container__time" >
+                        GRIPPER
+                    </div>
+                    <button onclick="gripper_meno_1()">-1</button>
+                    <input type="range" min="10" max="73" value="10" class="slider6" id="slider6">
+                    <button onclick="gripper_piu_1()">+1</button>
+                    <p>Value: <span id="output6">0</span></p>
+                </div>
+                <div class="sliders">
+                <div class="form_control_container__time">
+                    WRIST ROTATION
+                </div>
+                <button onclick="wrist_rotation_meno_1()">-1</button>
+                <input type="range" min="0" max="180" value="90" class="slider5" id="slider5">
+                <button onclick="wrist_rotation_piu_1()">+1</button>
+                <p>Value: <span id="output5">90</span></p>
+                </div>
+                <div class="sliders">
+                <div class="form_control_container__time">
+                    WRIST VERTICAL
+                </div>
+                <button onclick="wrist_vertical_meno_1()">-1</button>
+                <input type="range" min="0" max="180" value="180" class="slider4" id="slider4">
+                <button onclick="wrist_vertical_piu_1()">+1</button>
+                <p>Value: <span id="output4">180</span></p>
+                </div>
+                <div class="sliders">
+                <div class="form_control_container__time">
+                    ELBOW
+                </div>
+                <button onclick="elbow_meno_1()">-1</button>
+                <input type="range" min="0" max="180" value="180" class="slider3" id="slider3">
+                <button onclick="elbow_piu_1()">+1</button>
+                <p>Value: <span id="output3">180</span></p>
+                </div>
+                <div class="sliders">
+                <div class="form_control_container__time">
+                    SHOULDEL
+                </div>
+                <button onclick="shoulder_meno_1()">-1</button>
+                <input type="range" min="0" max="180" value="45" class="slider2" id="slider2">
+                <button onclick="shoulder_piu_1()">+1</button>
+                <p>Value: <span id="output2">45</span></p>
+                </div>
+                <div class="sliders">
+                <div class="form_control_container__time">
+                    BASE
+                </div>
+                <button onclick="base_meno_1()">-1</button>
+                <input type="range" min="0" max="180" value="0" class="slider1" id="slider1">
+                <button onclick="base_piu_1()">+1</button>
+                <p>Value: <span id="output1">0</span></p>
+                </div>
+                </div>
+            </div>
+        </div>
+        </td>
+        </table>
+            <script src="script2.js"></script>
+        </div>
+    </body>
+</html>

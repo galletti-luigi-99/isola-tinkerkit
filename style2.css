@@ -1,0 +1,87 @@
+.sliders{
+    margin:auto;
+    width:100%;
+    max-width:300px;
+    border-radius:10px;
+    border:1px rgb(0, 0, 0) solid;
+    overflow:hidden;
+    }
+    
+    .led-green {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: #ABFF00;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+    }
+    
+    .led-yellow {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: #fff700;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #434701 0 -1px 9px, #d0ff00 0 2px 12px;
+    }
+    
+    .led-red {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d00;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #470101 0 -1px 9px, #ff0000 0 2px 12px;
+    }
+    
+    .led-grey {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: #545454;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #323232 0 -1px 9px, #585857 0 2px 12px;
+    }
+    
+    .led-blu {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: #003cff;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #013447 0 -1px 9px, #0059ff 0 2px 12px;
+    }
+    
+    .led-none {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: #ff000000;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0) 0 -1px 7px 1px, inset #47010100 0 -1px 9px, #ff000000 0 2px 12px;
+    }
+    
+    .tabella {
+    margin: auto;
+    }
+    
+    .tabella2 {
+    margin: auto;
+    position: relative;
+    right: auto;
+    }
+    
+    .tabella3 {
+    margin: auto;
+    position: relative;
+    top: auto;
+    right: 0px;
+    }
+    
+    .titolo {
+    margin: auto;
+    }
+    
+    .button {
+    border-radius: 8px;
+    }
