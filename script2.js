@@ -240,8 +240,8 @@ slider6.oninput = function() {
       slider2.value = 45;
       var firebaseRef = firebase.database().ref().child("shoulder");
       firebaseRef.set(slider2.value);
-      output1.innerHTML = 0;
-      slider1.value = 0;
+      output1.innerHTML = 90;
+      slider1.value = 90;
       var firebaseRef = firebase.database().ref().child("base");
       firebaseRef.set(slider1.value);
       funzione
