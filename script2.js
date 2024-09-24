@@ -8,6 +8,7 @@
     appId: "1:939658469354:web:9c9cc56e080fa1768d1c93",
     measurementId: "G-PRCWZBMP5X"
   };
+  
   firebase.initializeApp(firebaseConfig);
   
   var slider6 = document.getElementById("slider6");
@@ -35,6 +36,7 @@
   var allarmi;
   var fermo;
   var emer;
+  var entry=0;
   var progapp=0;
   var emergency=0; 
 
@@ -79,7 +81,7 @@ database.ref().on("value", function(snap){
     fermo.value=snap.val().fermo;
 });
 
-slider6.oninput = function() {
+    slider6.oninput = function() {
     output6.innerHTML = this.value;
     var firebaseRef = firebase.database().ref().child("gripper");
     firebaseRef.set(slider6.value);
@@ -216,6 +218,49 @@ slider6.oninput = function() {
         ok.classList.remove("led-grey");
         ok.classList.add("led-green"); 
       }
+
+      if(entry==0){
+        entry=1;
+        output6.innerHTML = 10;
+        slider6.value = 10;
+        var firebaseRef = firebase.database().ref().child("gripper");
+        firebaseRef.set(slider6.value);
+        output5.innerHTML = 90;
+        slider5.value = 90;
+        var firebaseRef = firebase.database().ref().child("rotation");
+        firebaseRef.set(slider5.value);
+        output4.innerHTML = 180;
+        slider4.value = 180;
+        var firebaseRef = firebase.database().ref().child("vertical");
+        firebaseRef.set(slider4.value);
+        output3.innerHTML = 180;
+        slider3.value = 180;
+        var firebaseRef = firebase.database().ref().child("elbow");
+        firebaseRef.set(slider3.value);
+        output2.innerHTML = 45;
+        slider2.value = 45;
+        var firebaseRef = firebase.database().ref().child("shoulder");
+        firebaseRef.set(slider2.value);
+        output1.innerHTML = 90;
+        slider1.value = 90;
+        var firebaseRef = firebase.database().ref().child("base");
+        firebaseRef.set(slider1.value);
+        start=0;
+        var firebaseRef = firebase.database().ref().child("start");
+        firebaseRef.set(start);
+        reset=0;
+        var firebaseRef = firebase.database().ref().child("reset");
+        firebaseRef.set(reset);
+        fermo=0;
+        var firebaseRef = firebase.database().ref().child("stop");
+        firebaseRef.set(fermo);
+        emer=0;
+        var firebaseRef = firebase.database().ref().child("emergenza");
+        firebaseRef.set(emer);
+        apprendo=0;
+        var firebaseRef = firebase.database().ref().child("apprendimento");
+        firebaseRef.set(apprendo);
+      } 
       
       function reset_posizione_robot(){
       if(emergency==0){
